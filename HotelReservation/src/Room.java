@@ -2,13 +2,13 @@ public class Room {
     private int roomNumber;
     private String type;
     private double price;
-    private Reservation reservation; // Represents the current reservation for this room
+    private Reservation reservation; 
 
     public Room(int roomNumber, String type, double price) {
         this.roomNumber = roomNumber;
         this.type = type;
         this.price = price;
-        this.reservation = null; // Initially, the room has no reservation
+        this.reservation = null; 
     }
 
     public int getRoomNumber() {
@@ -24,18 +24,18 @@ public class Room {
     }
 
     public boolean isReserved() {
-        return reservation != null; // Check if the room is reserved
+        return reservation != null; 
     }
 
     public Reservation getReservation() {
-        return reservation; // Get the current reservation for this room
+        return reservation; 
     }
 
     public void setReservation(Reservation reservation) {
-        this.reservation = reservation; // Set a reservation for this room
+        this.reservation = reservation; 
     }
 
     public void cancelReservation() {
-        this.reservation = null; // Cancel the current reservation for this room
+        this.reservation = null; 
     }
 }
