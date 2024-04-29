@@ -6,7 +6,7 @@ public class Hotel {
     private List<Room> rooms;
 
     public Hotel() {
-        this.rooms = initializeRooms(); // Initialize hotel rooms
+        this.rooms = initializeRooms(); 
     }
 
     private List<Room> initializeRooms() {
@@ -33,9 +33,9 @@ public class Hotel {
             double totalPrice = calculateTotalPrice(room.getPrice(), checkInDate, checkOutDate);
             Reservation reservation = new Reservation(checkInDate, checkOutDate, guestName, totalPrice);
             room.setReservation(reservation);
-            return true; // Room booked successfully
+            return true; 
         }
-        return false; // Room booking failed
+        return false; 
     }
 
     public void cancelBooking(int roomNumber) {
@@ -51,10 +51,10 @@ public class Hotel {
     public Room findRoomByNumber(int roomNumber) {
         for (Room room : rooms) {
             if (room.getRoomNumber() == roomNumber) {
-                return room; // Found the room with the matching room number
+                return room;
             }
         }
-        return null; // Room with the specified number not found
+        return null; 
     }
 
     public double calculateTotalPrice(double roomPrice, LocalDate checkInDate, LocalDate checkOutDate) {
@@ -62,5 +62,4 @@ public class Hotel {
         return roomPrice * numDays;
     }
 
-    // Other methods like findRoomByNumber(), calculateTotalPrice(), etc.
 }
