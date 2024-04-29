@@ -19,7 +19,7 @@ public class HotelReservationSystem {
             System.out.print("Enter your choice: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -59,7 +59,7 @@ public class HotelReservationSystem {
     private static void makeReservation(Hotel hotel, Scanner scanner) {
         System.out.print("Enter room number: ");
         int roomNumber = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
 
         System.out.print("Enter check-in date (YYYY-MM-DD): ");
         LocalDate checkInDate = LocalDate.parse(scanner.nextLine());
@@ -77,7 +77,7 @@ public class HotelReservationSystem {
 
             System.out.print("Enter payment amount: ");
             double amountPaid = scanner.nextDouble();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine(); 
 
             if (amountPaid >= totalPrice) {
                 System.out.print("Enter payment method (e.g., credit card, cash): ");
@@ -99,7 +99,7 @@ public class HotelReservationSystem {
     private static void viewBookingDetails(Hotel hotel, Scanner scanner) {
         System.out.print("Enter room number to view booking details: ");
         int roomNumber = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
 
         Room room = hotel.findRoomByNumber(roomNumber);
         if (room != null && room.isReserved()) {
