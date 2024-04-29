@@ -8,9 +8,7 @@ public class Payment {
     }
 
     public void processPayment() {
-        // Simulate payment processing (e.g., charging credit card, handling cash payment)
         System.out.println("Processing payment of $" + amount + " via " + paymentMethod + "...");
-        // Add more logic here based on the actual payment processing requirements
         System.out.println("Payment processed successfully!");
     }
 
